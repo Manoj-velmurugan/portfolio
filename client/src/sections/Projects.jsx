@@ -58,10 +58,7 @@ export default function Projects() {
   };
 
   return (
-    <section
-      id="projects"
-      className="py-20 sm:py-24 md:py-28 bg-[#0b0b0f]"
-    >
+    <section id="projects" className="py-20 sm:py-24 md:py-28 bg-[#0b0b0f]">
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="flex items-center justify-between mb-10 sm:mb-12">
@@ -69,7 +66,7 @@ export default function Projects() {
             <span className="text-purple-400">My</span> Works
           </h2>
 
-          {/* Arrows (desktop only) */}
+          {/* Desktop arrows */}
           <div className="hidden md:flex gap-4">
             <button
               onClick={() => scroll("left")}
@@ -89,27 +86,12 @@ export default function Projects() {
         {/* Slider */}
         <div
           ref={sliderRef}
-          className="
-            flex gap-6 sm:gap-8
-            overflow-x-auto scroll-smooth
-            no-scrollbar
-            pb-4
-            snap-x snap-mandatory
-          "
+          className="flex gap-6 sm:gap-8 overflow-x-auto scroll-smooth no-scrollbar pb-4 snap-x snap-mandatory"
         >
           {projects.map((project, index) => (
             <div
               key={index}
-              className="
-                group
-                snap-start
-                min-w-[260px] sm:min-w-[300px] md:min-w-[360px]
-                bg-[#12121a]
-                border border-white/10
-                rounded-2xl
-                overflow-hidden
-                relative
-              "
+              className="group snap-start min-w-[260px] sm:min-w-[300px] md:min-w-[360px] bg-[#12121a] border border-white/10 rounded-2xl overflow-hidden relative flex flex-col"
             >
               {/* Image */}
               <div className="h-40 sm:h-44 md:h-48 overflow-hidden">
@@ -121,15 +103,16 @@ export default function Projects() {
               </div>
 
               {/* Content */}
-              <div className="p-5 sm:p-6">
+              <div className="p-5 sm:p-6 flex flex-col flex-1">
                 <h3 className="text-lg sm:text-xl font-semibold mb-2">
                   {project.title}
                 </h3>
+
                 <p className="text-gray-400 text-sm mb-4 leading-relaxed">
                   {project.desc}
                 </p>
 
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-2 mb-4">
                   {project.tech.map((t, i) => (
                     <span
                       key={i}
@@ -139,10 +122,37 @@ export default function Projects() {
                     </span>
                   ))}
                 </div>
+
+                {/* MOBILE ACTION BUTTONS – STUCK TO BOTTOM */}
+                <div className="mt-auto pt-4 flex gap-3 md:hidden">
+                  {project.live && (
+                    <a
+                      href={project.live}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 rounded-full bg-purple-600 text-xs"
+                    >
+                      <FaExternalLinkAlt size={12} />
+                      Live
+                    </a>
+                  )}
+
+                  {project.github && (
+                    <a
+                      href={project.github}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 px-4 py-2 rounded-full border border-white/20 text-xs"
+                    >
+                      <FaGithub size={14} />
+                      GitHub
+                    </a>
+                  )}
+                </div>
               </div>
 
-              {/* Hover Overlay (desktop hover, mobile tap-safe) */}
-              <div className="absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition flex items-center justify-center gap-4">
+              {/* DESKTOP HOVER OVERLAY */}
+              <div className="hidden md:flex absolute inset-0 bg-black/80 opacity-0 group-hover:opacity-100 transition items-center justify-center gap-4">
                 {project.live && (
                   <a
                     href={project.live}

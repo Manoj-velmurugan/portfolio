@@ -42,12 +42,13 @@ export default function Skills() {
           <div
             className="
               grid
-              grid-cols-4            /* ✅ mobile: 4 per row */
+              grid-cols-4
               sm:grid-cols-5
               md:grid-cols-6
-              gap-x-4 sm:gap-x-6 md:gap-x-10
-              gap-y-8 sm:gap-y-10 md:gap-y-14
+              gap-6 sm:gap-8 md:gap-12
+              place-items-center
               max-w-6xl
+              w-full
             "
           >
             {skills.map((skill, index) => (
@@ -55,10 +56,9 @@ export default function Skills() {
                 key={index}
                 className="
                   group
-                  w-20 h-24
-                  sm:w-24 sm:h-28
-                  md:w-32 md:h-36
-                  lg:w-40 lg:h-44
+                  w-full
+                  aspect-[4/5]
+                  max-w-[72px] sm:max-w-[88px] md:max-w-[120px] lg:max-w-[160px]
                   flex flex-col items-center justify-center gap-2
                   bg-[#12121a]
                   border border-white/10
