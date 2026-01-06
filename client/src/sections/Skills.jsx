@@ -27,10 +27,7 @@ const skills = [
 
 export default function Skills() {
   return (
-    <section
-      id="skills"
-      className="py-20 sm:py-24 md:py-28 bg-[#0b0b0f]"
-    >
+    <section id="skills" className="py-20 sm:py-24 md:py-28 bg-[#0b0b0f]">
       <div className="max-w-7xl mx-auto px-6">
         {/* Section Heading */}
         <h2 className="text-3xl md:text-4xl font-bold mb-12 sm:mb-14 md:mb-16 text-center">
@@ -45,7 +42,8 @@ export default function Skills() {
               grid-cols-4
               sm:grid-cols-5
               md:grid-cols-6
-              gap-6 sm:gap-6 md:gap-10
+   gap-4 sm:gap-6 md:gap-10
+
               place-items-center
               max-w-6xl
               w-full
