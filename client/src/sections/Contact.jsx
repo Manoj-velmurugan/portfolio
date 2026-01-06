@@ -116,8 +116,9 @@ export default function Contact() {
               </div>
 
               {success && (
-                <p className="md:col-span-2 text-center text-green-400 mt-4">
-                  Message sent successfully 🚀
+                <p className="md:col-span-2 text-center text-purple-400 mt-4 text-sm">
+                  Thank you for reaching out. Your message has been sent
+                  successfully.
                 </p>
               )}
             </form>
