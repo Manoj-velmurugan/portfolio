@@ -45,7 +45,7 @@ export default function Skills() {
               grid-cols-4
               sm:grid-cols-5
               md:grid-cols-6
-              gap-6 sm:gap-8 md:gap-12
+              gap-6 sm:gap-6 md:gap-10
               place-items-center
               max-w-6xl
               w-full
