@@ -1,0 +1,86 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base background */
+body {
+  background-color: #0b0b0f;
+}
+
+/* Hide scrollbar (Chrome, Safari, Edge) */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar (Firefox) */
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* Smooth anchor scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ============================= */
+/* Floating content animation */
+/* ============================= */
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-float {
+  animation: float 6s ease-in-out infinite;
+}
+
+/* ============================= */
+/* Sketch / Blueprint animation */
+/* ============================= */
+@keyframes draw-line {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes wobble {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(1px, -1px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+
+/* Main sketch style */
+.sketch-line {
+  stroke: rgba(168, 85, 247, 0.6);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+
+  animation:
+    draw-line 4s ease forwards,
+    wobble 6s ease-in-out infinite;
+}
+
+
+/* Opacity helper for side sketches */
+.opacity-40 {
+  opacity: 0.4;
+}
