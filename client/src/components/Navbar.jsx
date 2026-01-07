@@ -104,7 +104,7 @@ export default function Navbar() {
                 onClick={handleNavClick}
                 className="px-6 py-2 rounded-full bg-purple-600 hover:bg-purple-700 transition"
               >
-                Hire Me
+                Let's talk
               </a>
             </li>
           </ul>
