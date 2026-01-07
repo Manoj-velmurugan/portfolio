@@ -20,9 +20,9 @@ const projects = [
     github: null,
   },
   {
-    title: "Spice Canvas - Food Recipe App",
+    title: "EHR Consent Management Platform",
     desc: "A blockchain-based EHR consent management system for secure medical data sharing.",
-    tech: ["React", "Express", "Node", "MongoDB", "Tailwind"],
+    tech: ["MERN", "Tailwind", "JWT", "Blockchain"],
     image: ehrImg,
     live: null,
     github: "https://github.com/Manoj-velmurugan/ehr_consent_management_system",
