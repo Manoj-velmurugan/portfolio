@@ -8,7 +8,15 @@ import {
   FaPython,
   FaJava,
 } from "react-icons/fa";
-import { SiMongodb, SiTailwindcss, SiC, SiWebflow } from "react-icons/si";
+
+import {
+  SiMongodb,
+  SiMysql,
+  SiTailwindcss,
+  SiC,
+  SiWebflow,
+} from "react-icons/si";
+
 
 const skills = [
   { name: "HTML", icon: <FaHtml5 /> },
@@ -19,7 +27,7 @@ const skills = [
   { name: "MongoDB", icon: <SiMongodb /> },
   { name: "Tailwind", icon: <SiTailwindcss /> },
   { name: "Webflow", icon: <SiWebflow /> },
-  { name: "Git", icon: <FaGitAlt /> },
+  { name: "MySQL", icon: <SiMysql /> },
   { name: "Python", icon: <FaPython /> },
   { name: "C", icon: <SiC /> },
   { name: "Java", icon: <FaJava /> },

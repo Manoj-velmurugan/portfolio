@@ -133,7 +133,7 @@ export default function Contact() {
                 <FaEnvelope size={22} />
               </a>
               <a
-                href="https://linkedin.com/manoj-mv"
+                href="https://www.linkedin.com/in/manoj-mv/"
                 target="_blank"
                 className="text-gray-400 hover:text-purple-400 transition"
               >
