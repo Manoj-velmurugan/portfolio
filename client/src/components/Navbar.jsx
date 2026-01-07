@@ -65,7 +65,7 @@ export default function Navbar() {
           href="#contact"
           className="hidden md:block px-4 py-2 rounded-full bg-purple-600 hover:bg-purple-700 text-sm transition"
         >
-          Hire Me
+          Let's talk
         </a>
 
         {/* Mobile Toggle */}
